@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RGB</title>
+    <link rel="stylesheet" href="rgb.css">
+    <script src="rgb.js"></script>
+</head>
+<body>
+    <h1>RGB &harr; HEX</h1>
+    <div class="container">
+        <h2 title="Can also convert decimal numbers to HEX numbers ignore the last 2 digits">RGB</h2>
+        <label for="red">RED</label><input id="red" type="number" min="0" max="255">
+        <label for="green">GREEN</label><input id="green" type="number" min="0" max="255">
+        <label for="blue">BLUE</label><input id="blue" type="number" min="0" max="255">
+        <button onclick="colorhex()">convert to HEX</button>
+        <h2 id="rgbtxt" class="color">text color</h2>
+    </div>
+    <div class="container">
+        <h2>HEX</h2>
+        <label for="hex">HEX</label><input id="hex" type="text">
+        <button onclick="colorrgb()">convert to RGB</button>
+        <h2 class="color" id="hextxt">text color</h2>
+    </div>
+</body>
+</html>

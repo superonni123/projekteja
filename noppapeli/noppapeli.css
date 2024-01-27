@@ -1,0 +1,34 @@
+div{
+    position: absolute;
+    left: 40%;
+    box-shadow: 5px 5px 10px black;
+    height: 100%;
+    background-color: white;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+td{
+    height: 1em;
+    text-align: center;
+}
+th{
+    width: 5em;
+}
+body{
+    background-color: #241f31;
+}
+h1, h2{
+    text-align: center;
+    text-decoration: underline;
+}
+#pyorayta{
+    box-shadow: 5px 5px 5px black;
+    background-color: lightgreen;
+}
+#arvo{
+    margin-right: 100%;
+    margin-bottom: 1em;
+}
+img{
+    box-shadow: 5px 5px 5px black;
+}

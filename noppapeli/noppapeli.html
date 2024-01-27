@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>noppapeli</title>
+    <script type="text/javascript" src="noppapeli.js"></script>
+    <link rel="stylesheet" href="noppapeli.css">
+    <link rel="icon" href="kuvat/noppa.gif">
+    <body id="tausta">
+        <div>
+            <a href="../index.html" style="background-color: orange;">index</a>
+            <h1>Noppapeli</h1>
+            <p id="luku">Nopan silmäluku: </p>
+            <img src="kuvat/noppa.png" id="noppa" width="150px">
+            <p id="pisteet">Pisteet: </p>
+            <p id="pelit">Pelikerrat: </p>
+            <p id="arvaus">Arvaus: </p>
+            <input type="range" name="arvo" id="arvo" min="1" max="6" step="1" value="1">
+            <button id="pyorayta" onclick="pyorayta();">Pyöräytä noppaa</button>
+            <br>
+            <br>
+            <h2>Noppien frekvenssi</h2>
+            <table border="1">
+                <tr>
+                    <th>Yksi</th>
+                    <th>Kaksi</th>
+                    <th>Kolme</th>
+                    <th>Neljä</th>
+                    <th>Viisi</th>
+                    <th>Kuusi</th>
+                </tr>
+                <tr>
+                    <td id="fre1"></td>
+                    <td id="fre2"></td>
+                    <td id="fre3"></td>
+                    <td id="fre4"></td>
+                    <td id="fre5"></td>
+                    <td id="fre6"></td>
+                </tr>
+            </table>
+        </div>
+        <input type="color" name="vari" id="vari" value="#B57EDC">
+        <script>
+            //luo tapahtumakuuntelijan arvo id:lle joka kuuntelee muutosta
+            document.getElementById("arvo").addEventListener("change", function(){
+                //hakee arvauksen arvon
+                arvo = document.getElementById("arvo").valueAsNumber;
+                //päivittää arvauksen tekstin
+                document.getElementById("arvaus").innerHTML = "Arvaus: " + arvo;
+            });
+            //luo tapahtumankuuntelijan vari id:lle joka kuuntelee muutosta
+            document.getElementById("vari").addEventListener("change", function(){
+                //hakee värin arvon
+                vari = document.getElementById("vari").value;
+                //hakee tausta id:n (body)
+                tausta = document.getElementById("tausta");
+                //muuttaa taustavärin valittuun väriin
+                tausta.setAttribute("style", "background-color:" +vari);
+            });
+        </script>
+    </body>
+</head>
